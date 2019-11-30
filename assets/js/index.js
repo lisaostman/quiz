@@ -81,10 +81,56 @@ $(document).ready(function ()
                     span.innerHTML = counter;
                 }
                 // Display 'counter' wherever you want to display it.
-                if (counter === 0) 
+                if (counter < 0) 
                 {
                     //    alert('this is where it happens');
                     clearInterval(counter);
+                    $(".fullbody").html("");
+                                        
+                                        var newcontainer = $("<div>");
+                                        newcontainer.addClass("container mt-4");
+                                        var newrow2= $("<div>");
+                                        newrow2.addClass("row");
+                                        var col2 = $("<div>");
+                                        col2.addClass("col-md-4");
+                                        var col3 = $("<div>");
+                                        col3.addClass("col-md-4");
+                                        var heading= $("<h2>");
+                                        heading.text("Times Up! ");
+                                        col3.append(heading);
+                                        newrow2.append(col2);
+                                        newrow2.append(col3);
+                                        
+                                        newcontainer.append(newrow2);
+
+                                        var newrow = $("<div>");
+                                        newrow.addClass("row");
+                                        var col = $("<div>");
+                                        col.addClass("col-md-4");
+                                        var resultboxDiv = $("<div>");
+                                        resultboxDiv.addClass("col-md-4");
+                                        newrow.append(col);
+                                        newrow.append(resultboxDiv);
+                                        newcontainer.append(newrow);
+                                        resultboxDiv.text("The highest score on record was " + localStorage.getItem("highscore") + " by " + localStorage.getItem("initialName"));
+                                        
+                                        var clear = $("<button>");
+                                        clear.addClass("clearButton btn-info");
+                                        clear.text("Clear High Scores");
+                                        newcontainer.append(clear);
+                                        $(".fullbody").append(newcontainer);
+
+                                        $(".clearButton").on("click", function() 
+                                        {
+                                            localStorage.removeItem("highscore");
+                                            localStorage.removeItem("initialName");
+                                            localStorage.clear();
+                                            window.localStorage.clear();
+                                            
+                                            alert("Highscores cleared!")
+                                        }
+                                        ) 
+
                 }
 
             }, 1000);
@@ -221,7 +267,7 @@ $(document).ready(function ()
                                             localStorage.clear();
                                             window.localStorage.clear();
                                             
-                                            alert("Highscores cleared!")
+                                            alert("highscores cleared!")
                                         }
                                         ) 
 
@@ -250,7 +296,7 @@ $(document).ready(function ()
                                             localStorage.clear();
                                             window.localStorage.clear();
                                             
-                                            alert("Highscores cleared!")
+                                            alert("highscores cleared!")
                                         }
                                         ) 
                                      
