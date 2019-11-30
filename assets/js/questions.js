@@ -9,13 +9,20 @@ var htmlQuestions = [
       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
       answer: "parentheses"
     },
-    ///etc.
+    {
+      title: "In which HTML element do we put in javascript code?",
+      choices: ["<js>", "<script>", "<body>", "<link>"],
+      answer: "<script>"
+    }
   ];
+
+
+
 
   var javaQuestions = [
     {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
+      title: "APLEEEES",
+      choices: ["chocolate", "gummeybears", "alerts", "numbers"],
       answer: "alerts"
     },
     {
@@ -25,21 +32,29 @@ var htmlQuestions = [
     },
     ///etc.
   ];
+
+
+
+
 
   var cssQuestions = [
     {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
+      title: "wowwwwdude:",
+      choices: ["strings", "so", "alerts", "cool"],
       answer: "alerts"
     },
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
+      title: "The okay in an if / else statement is enclosed within ____.",
       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
       answer: "parentheses"
     },
     ///etc.
   ];
 
-  console.log(htmlQuestions)
+  $( document ).ready(function() {
+   
+});
+
+  
   
  
